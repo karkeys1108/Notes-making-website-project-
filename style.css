@@ -1,0 +1,97 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(100deg, #cf9aff, #95c0ff);
+}
+
+header {
+    background: linear-gradient(100deg, #cf9aff, #95c0ff);
+    color: #000;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.notes-area {
+    max-width: 800px;
+    margin: 20px auto;
+    background: linear-gradient(130deg, #cf9aff, #95c0ff);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#notes-container {
+    margin-bottom: 20px;
+}
+
+#add-note,
+#search-reminder {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input[type="text"]::placeholder,
+input[type="datetime-local"]::placeholder,
+textarea::placeholder {
+    color: #888;
+}
+
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 30%;
+    transition: background-color 0.3s;
+    outline: none; 
+}
+
+button:hover,
+button:focus {
+    background-color: #555;
+}
+
+
+button:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+input[type="text"],
+input[type="datetime-local"],
+textarea {
+    transition: border-color 0.3s;
+}
+
+
+input[type="text"]:focus,
+input[type="datetime-local"]:focus,
+textarea:focus {
+    border-color: #555;
+}
+
+
+@media (max-width: 600px) {
+    .notes-area {
+        padding: 10px;
+    }
+
+    button {
+        margin-left: 0; /* Adjust for better responsiveness on smaller screens */
+    }
+}
